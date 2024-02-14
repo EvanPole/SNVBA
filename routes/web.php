@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\LangController;
 use App\Http\Controllers\LicencierController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -46,5 +47,8 @@ Route::get('/events', function () {
 Route::get('/partners', function () {
     return view('partners');
 })->name('partners');
+
+Route::get('locale', [LangController::class, 'getLang'])->name('getLang');
+Route::get('locale/{lang}', [LangController::class, 'setLang'])->name('setLang');
 
 require __DIR__.'/auth.php';

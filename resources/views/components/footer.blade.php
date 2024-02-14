@@ -31,6 +31,10 @@
           </svg>
         </a>
       </div>
-      <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2024 SNVBA. {{ __('All rights reserved.') }}</p>
+      <div class="flex justify-center sm:space-x-12 py-14 sm:py-18">
+        <a href="locale/fr" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Français</a>
+        <a href="locale/en" class="text-sm leading-6 text-gray-600 hover:text-gray-900">English</a>
+      </div>
+      <p class="text-center text-xs leading-5 text-gray-500">&copy; 2024 SNVBA. {{ __('All rights reserved.') }}</p>
     </div>
   </footer>
