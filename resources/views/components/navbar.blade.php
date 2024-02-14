@@ -17,14 +17,17 @@
         <a href="{{ route('index') }}" class="text-base font-semibold leading-6 {{ Route::is('index') ? 'text-white/100' : 'text-blue-900/50 duration-200 hover:duration-200 hover:text-blue-900/50' }}">{{ __('Home') }}</a>
         <a href="{{ route('events') }}" class="text-base font-semibold leading-6 duration-200 hover:duration-200 {{ Route::is('events') ? 'text-blue-900' : (Route::is('partners') ? 'text-blue-900/50' : 'text-white/50 duration-200 hover:duration-200 hover:text-white/75') }}">{{ __('Events') }}</a>
         <a href="{{ route('partners') }}" class="text-base font-semibold leading-6 {{ Route::is('partners') ? 'text-blue-900' : (Route::is('events') ? 'text-blue-900/50' : 'text-white/50 duration-200 hover:duration-200 hover:text-white/75') }}">{{ __('Partners') }}</a>
-      </div>    
+      </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-8">
-        @guest
-            <a href="{{ route('login') }}" class="my-auto text-base font-semibold leading-6 {{ Route::is('index') ? 'text-white/50 duration-200 hover:duration-200 hover:text-white' : 'text-blue-900/50' }}">{{ __('Login') }}</a>
-        @endguest
-        @Auth
-            <a href="{{ route('dashboard') }}" class="my-auto text-base font-semibold leading-6 {{ Route::is('index') ? 'text-white/50 duration-200 hover:duration-200 hover:text-white' : 'text-blue-900/50' }}">{{ __('Dashboard') }}</a>
-        @endAuth
+        <a href="{{ route('login') }}" class="my-auto text-base font-semibold leading-6 {{ Route::is('index') ? 'text-white/50 duration-200 hover:duration-200 hover:text-white' : 'text-blue-900/50' }}">{{ __('Login') }}</a>
+        <!-- Dropdown de changement de langue -->
+        <form action="" method="get">
+          @csrf
+          <select name="locale" onchange="this.form.submit()" class="{{ Route::is('index') ? 'border-white/50 text-white/50 hover:bg-black/5' : 'border-blue-900/50 text-blue-900/50' }} duration-200 hover:duration-200 bg-transparent border rounded outline-none px-4 py-2">
+            <option value="en" {{ App::getLocale() == 'en' ? 'selected' : '' }}>English</option>
+            <option value="fr" {{ App::getLocale() == 'fr' ? 'selected' : '' }}>Français</option>
+          </select>
+        </form>
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->

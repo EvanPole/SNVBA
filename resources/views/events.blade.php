@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Events</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -33,7 +34,7 @@
                     <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                       <div class="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                         <h1 class="text-4xl font-bold tracking-tight text-blue-950 sm:text-6xl">{{ __('All events about the Saint-Nazaire club.') }}</h1>
-                        <p class="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis cupidatat mollit aute velit. Et labore commodo nulla aliqua proident mollit ullamco exercitation tempor. Sint aliqua anim nulla sunt mollit id pariatur in voluptate cillum.</p>
+                        <p class="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">{{ __('If an event is not present on the page, contact us and we will resolve this problem as soon as possible. This page may contain: match, new player, changes, ...') }}</p>
                         <div class="mt-10 flex items-center gap-x-6">
                           <x-primary-button>{{ __('Register') }}</x-primary-button>
                           <x-secondary-button>{{ __('Login') }}</x-secondary-button>
@@ -71,6 +72,227 @@
                   </div>
                 </div>
               </div>
+              <div class="relative px-6 pb-20 pt-16 lg:px-8 lg:pb-28 lg:pt-24">
+                <div class="absolute inset-0">
+                  <div class="h-1/3 bg-white sm:h-2/3"></div>
+                </div>
+                <div class="relative mx-auto max-w-7xl">
+                  <div class="text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-blue-900 sm:text-4xl">{{ __('The last events') }}</h2>
+                    <p class="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.</p>
+                  </div>
+                  <div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
+                    <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+                      <div class="flex-shrink-0">
+                        <img class="h-48 w-full object-cover" src="/News1.jpg" alt="">
+                      </div>
+                      <div class="flex flex-1 flex-col justify-between bg-white p-6">
+                        <div class="flex-1">
+                          <p class="text-sm font-medium text-indigo-600">
+                            <a href="#" class="hover:underline">Article</a>
+                          </p>
+                          <a href="#" class="mt-2 block">
+                            <p class="text-xl font-semibold text-gray-900">{{ __('Defeat against the Owls') }}</p>
+                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
+                          </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                          <div class="flex-shrink-0">
+                            <a href="#">
+                              <span class="sr-only">Stéphane Hervy</span>
+                              <img class="h-10 w-10 rounded-full" src="/StephaneHERVY.jpeg" alt="">
+                            </a>
+                          </div>
+                          <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">
+                              <a href="#" class="hover:underline">Stéphane Hervy</a>
+                            </p>
+                            <div class="flex space-x-1 text-sm text-gray-500">
+                              <time datetime="2020-03-16">{{ __('Mar 16, 2023') }}</time>
+                              <span aria-hidden="true">&middot;</span>
+                              <span>{{ __('6 min read') }}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+                      <div class="flex-shrink-0">
+                        <img class="h-48 w-full object-cover" src="/News2.jpg" alt="">
+                      </div>
+                      <div class="flex flex-1 flex-col justify-between bg-white p-6">
+                        <div class="flex-1">
+                          <p class="text-sm font-medium text-indigo-600">
+                            <a href="#" class="hover:underline">Article</a>
+                          </p>
+                          <a href="#" class="mt-2 block">
+                            <p class="text-xl font-semibold text-gray-900">{{ __('A match lost against the Spacer\'s') }}</p>
+                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
+                          </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                          <div class="flex-shrink-0">
+                            <a href="#">
+                              <span class="sr-only">Stéphane Hervy</span>
+                              <img class="h-10 w-10 rounded-full" src="/StephaneHERVY.jpeg" alt="">
+                            </a>
+                          </div>
+                          <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">
+                              <a href="#" class="hover:underline">Stéphane Hervy</a>
+                            </p>
+                            <div class="flex space-x-1 text-sm text-gray-500">
+                              <time datetime="2020-03-16">{{ __('Mar 16, 2023') }}</time>
+                              <span aria-hidden="true">&middot;</span>
+                              <span>{{ __('6 min read') }}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+                      <div class="flex-shrink-0">
+                        <img class="h-48 w-full object-cover" src="/News3.jpg" alt="">
+                      </div>
+                      <div class="flex flex-1 flex-col justify-between bg-white p-6">
+                        <div class="flex-1">
+                          <p class="text-sm font-medium text-indigo-600">
+                            <a href="#" class="hover:underline">Article</a>
+                          </p>
+                          <a href="#" class="mt-2 block">
+                            <p class="text-xl font-semibold text-gray-900">{{ __('SNVBA lost against Rezé') }}</p>
+                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
+                          </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                          <div class="flex-shrink-0">
+                            <a href="#">
+                              <span class="sr-only">Stéphane Hervy</span>
+                              <img class="h-10 w-10 rounded-full" src="/StephaneHERVY.jpeg" alt="">
+                            </a>
+                          </div>
+                          <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">
+                              <a href="#" class="hover:underline">Stéphane Hervy</a>
+                            </p>
+                            <div class="flex space-x-1 text-sm text-gray-500">
+                              <time datetime="2020-03-16">{{ __('Mar 16, 2023') }}</time>
+                              <span aria-hidden="true">&middot;</span>
+                              <span>{{ __('6 min read') }}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+                      <div class="flex-shrink-0">
+                        <img class="h-48 w-full object-cover" src="/News1.jpg" alt="">
+                      </div>
+                      <div class="flex flex-1 flex-col justify-between bg-white p-6">
+                        <div class="flex-1">
+                          <p class="text-sm font-medium text-indigo-600">
+                            <a href="#" class="hover:underline">Article</a>
+                          </p>
+                          <a href="#" class="mt-2 block">
+                            <p class="text-xl font-semibold text-gray-900">{{ __('Defeat against the Owls') }}</p>
+                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
+                          </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                          <div class="flex-shrink-0">
+                            <a href="#">
+                              <span class="sr-only">Stéphane Hervy</span>
+                              <img class="h-10 w-10 rounded-full" src="/StephaneHERVY.jpeg" alt="">
+                            </a>
+                          </div>
+                          <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">
+                              <a href="#" class="hover:underline">Stéphane Hervy</a>
+                            </p>
+                            <div class="flex space-x-1 text-sm text-gray-500">
+                              <time datetime="2020-03-16">{{ __('Mar 16, 2023') }}</time>
+                              <span aria-hidden="true">&middot;</span>
+                              <span>{{ __('6 min read') }}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+                      <div class="flex-shrink-0">
+                        <img class="h-48 w-full object-cover" src="/News2.jpg" alt="">
+                      </div>
+                      <div class="flex flex-1 flex-col justify-between bg-white p-6">
+                        <div class="flex-1">
+                          <p class="text-sm font-medium text-indigo-600">
+                            <a href="#" class="hover:underline">Article</a>
+                          </p>
+                          <a href="#" class="mt-2 block">
+                            <p class="text-xl font-semibold text-gray-900">{{ __('A match lost against the Spacer\'s') }}</p>
+                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
+                          </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                          <div class="flex-shrink-0">
+                            <a href="#">
+                              <span class="sr-only">Stéphane Hervy</span>
+                              <img class="h-10 w-10 rounded-full" src="/StephaneHERVY.jpeg" alt="">
+                            </a>
+                          </div>
+                          <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">
+                              <a href="#" class="hover:underline">Stéphane Hervy</a>
+                            </p>
+                            <div class="flex space-x-1 text-sm text-gray-500">
+                              <time datetime="2020-03-16">{{ __('Mar 16, 2023') }}</time>
+                              <span aria-hidden="true">&middot;</span>
+                              <span>{{ __('6 min read') }}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+                      <div class="flex-shrink-0">
+                        <img class="h-48 w-full object-cover" src="/News3.jpg" alt="">
+                      </div>
+                      <div class="flex flex-1 flex-col justify-between bg-white p-6">
+                        <div class="flex-1">
+                          <p class="text-sm font-medium text-indigo-600">
+                            <a href="#" class="hover:underline">Article</a>
+                          </p>
+                          <a href="#" class="mt-2 block">
+                            <p class="text-xl font-semibold text-gray-900">{{ __('SNVBA lost against Rezé') }}</p>
+                            <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
+                          </a>
+                        </div>
+                        <div class="mt-6 flex items-center">
+                          <div class="flex-shrink-0">
+                            <a href="#">
+                              <span class="sr-only">Stéphane Hervy</span>
+                              <img class="h-10 w-10 rounded-full" src="/StephaneHERVY.jpeg" alt="">
+                            </a>
+                          </div>
+                          <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">
+                              <a href="#" class="hover:underline">Stéphane Hervy</a>
+                            </p>
+                            <div class="flex space-x-1 text-sm text-gray-500">
+                              <time datetime="2020-03-16">{{ __('Mar 16, 2023') }}</time>
+                              <span aria-hidden="true">&middot;</span>
+                              <span>{{ __('6 min read') }}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="my-10 flex justify-center">
+                    <x-secondary-button>{{ __('See more') }}</x-secondary-button>
+                  </div>
+                </div>
+              </div>
         </main>
+        <x-footer/>
     </body>
 </html>

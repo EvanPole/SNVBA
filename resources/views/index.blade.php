@@ -31,7 +31,7 @@
                 </div>
                 <div class="text-center">
                   <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ __('Saint-Nazaire Official Atlantic Volleyball') }}</h1>
-                  <p class="mt-6 text-lg leading-8 text-gray-300">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                  <p class="mt-6 text-lg leading-8 text-gray-300">{{ __('There is the official website of the SNVBA club which exists since 2015.') }}</p>
                   <div class="mt-10 flex items-center justify-center gap-x-6">
                     <a href="{{ route('register') }}" class="rounded-md bg-blue-900 px-3.5 py-2.5 font-semibold text-white shadow-sm hover:bg-blue-800 duration-200 hover:duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Register</a>
                     <a href="{{ route('login') }}" class="font-semibold leading-6 text-white">{{ __('Login') }}</a>
@@ -63,7 +63,7 @@
                           {{ __('Defeat against the Owls') }}
                         </a>
                       </h3>
-                      <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
+                      <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{{ __('Despite difficulties in attack against the Hiboux block at the start of the set, our Blues remain 2 points behind their opponents (6-8). It is an efficient Nicolas Burel on the attack which allows the SNVBA to lead in this 1st set 16-15. After a very close end to the set, it was ultimately the opponents who won this first set 23-25.') }}</p>
                     </div>
                     <div class="relative mt-8 flex items-center gap-x-4">
                       <img src="/StephaneHERVY.jpeg" alt="" class="h-10 w-10 rounded-full bg-gray-100">
@@ -86,7 +86,7 @@
                   </div>
                   <div class="max-w-xl">
                     <div class="mt-8 flex items-center gap-x-4 text-xs">
-                      <time datetime="2020-03-16" class="text-gray-500">{{ __('Feb 14, 2024') }}</time>
+                      <time datetime="2020-03-16" class="text-gray-500">{{ __('Jan 6, 2024') }}</time>
                     </div>
                     <div class="group relative">
                       <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
@@ -95,7 +95,7 @@
                           {{ __('A match lost against the Spacer\'s') }}
                         </a>
                       </h3>
-                      <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
+                      <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{{ __('This match begins with flying colors, the two teams compete for each point (10-12) with the sole objective of qualifying for the quarter-finals. The suspense was at its height until the end of the set, but Jordan Ewert, thanks to a winning block, allowed the Nazairiens to win this first round (25-22).') }}</p>
                     </div>
                     <div class="relative mt-8 flex items-center gap-x-4">
                       <img src="/StephaneHERVY.jpeg" alt="" class="h-10 w-10 rounded-full bg-gray-100">
@@ -118,7 +118,7 @@
                   </div>
                   <div class="max-w-xl">
                     <div class="mt-8 flex items-center gap-x-4 text-xs">
-                      <time datetime="2020-03-16" class="text-gray-500">{{ __('Feb 14, 2024') }}</time>
+                      <time datetime="2020-03-16" class="text-gray-500">{{ __('Dec 3, 2024') }}</time>
                     </div>
                     <div class="group relative">
                       <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
@@ -127,7 +127,7 @@
                           {{ __('SNVBA lost against Rezé') }}
                         </a>
                       </h3>
-                      <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
+                      <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{{ __('The start of the match was closely contested (10-8). Rubinho\'s men maintained constant pressure on the opponent thanks to their efficiency in attack and service (13-10). The Blues were able to limit mistakes and remain dominant in the game. The Nazairiens widened the gap, notably thanks to an ace from Jordan Ewert (20-13), finally winning this set 25-19.') }}</p>
                     </div>
                     <div class="relative mt-8 flex items-center gap-x-4">
                       <img src="/StephaneHERVY.jpeg" alt="" class="h-10 w-10 rounded-full bg-gray-100">
@@ -156,15 +156,19 @@
                 <div class="mt-10 lg:col-span-7 lg:mt-0">
                   <dl class="space-y-10">
                     <div>
-                      <dt class="text-base font-semibold leading-7 text-gray-900">{{ __('How do you make holy water ?') }}</dt>
-                      <dd class="mt-2 text-base leading-7 text-gray-600">{{ __('You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.') }}</dd>
+                      <dt class="text-base font-semibold leading-7 text-gray-900">{{ __('Where are you located ?') }}</dt>
+                      <dd class="mt-2 text-base leading-7 text-gray-600">{{ _('Our club is located in Saint-Nazaire in Loire Atlantique in France.') }}</dd>
+                    </div>
+                    <div>
+                      <dt class="text-base font-semibold leading-7 text-gray-900">{{ __('When the club was created ?') }}</dt>
+                      <dd class="mt-2 text-base leading-7 text-gray-600">{{ _('The SNVBA exist since 2015.') }}</dd>
                     </div>
                   </dl>
                 </div>
               </div>
             </div>
-          </div>          
-          <x-footer />  
+          </div>
+          <x-footer />
         </main>
     </body>
 </html>
