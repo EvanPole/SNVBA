@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
 
 class ExportController extends Controller
 {
     public function export()
     {
+        if ( Auth::user()->permission != 10 ){
+            redirect()->back();
+            die(301);
+        }
         $tableData = User::all(); // Fetch all data from the table
 
         $csvFileName = 'table_data.csv';

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class InscriptionController extends Controller
 {
@@ -12,6 +13,11 @@ class InscriptionController extends Controller
      */
     public function index()
     {
+       if(Auth::user()->permission < 1){
+            redirect()->back();
+            die(301);
+       }
+
         $licenciernv = User::where('validate', '=', null)->get();
 
         return view('licencier.admin.inscription', compact('licenciernv'));
@@ -24,9 +30,9 @@ class InscriptionController extends Controller
 
     public function update(Request $request, $id)
     {
-        
+
         $user = User::findOrFail($id);
-     
+
         $user->validate = 1;
         $user->save();
 

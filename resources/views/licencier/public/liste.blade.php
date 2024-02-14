@@ -31,6 +31,7 @@
                         <td class="border px-4 py-2">{{ $item->lastname }}</td>
                         <td class="border px-4 py-2">{{ $item->birthdate }}</td>
                         <td class="border px-4 py-2">
+                            @if ( Auth::user()->permission < 1)
                             @php
                                 $birthdate = new DateTime($item->birthdate);
                                 $age = $birthdate->diff(new DateTime('now'))->y;
@@ -38,6 +39,7 @@
                             @if ($age < 18)
                                 <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
                                     onclick="deleteUser('{{ $item->id }}')">Supprimer</button>
+                            @endif
                             @endif
                         </td>
                     </tr>

@@ -18,12 +18,18 @@
                     <x-nav-link :href="route('licencier.index')" :active="request()->routeIs('licencier')">
                         {{ __('licencier') }}
                     </x-nav-link>
+                    @if ( Auth::user()->permission == 1 )
+
                     <x-nav-link :href="route('inscription.index')" :active="request()->routeIs('inscription')">
                         {{ __('inscription') }}
                     </x-nav-link>
+                    @endif
+
+                    @if ( Auth::user()->permission == 10 )
                     <x-nav-link :href="route('export')" :active="request()->routeIs('export')">
                         {{ __('[Exporter les licencier]') }}
                     </x-nav-link>
+                    @endif
                 </div>
             </div>
 
